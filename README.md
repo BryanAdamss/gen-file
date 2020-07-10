@@ -1,6 +1,6 @@
 # gen-file
 
-> read ejs template then create a file
+> read ejs template then generate a file
 
 [English](https://github.com/BryanAdamss/gen-file/blob/master/README.md) | [中文](https://github.com/BryanAdamss/gen-file/blob/master/README.zh-CN.md)
 
