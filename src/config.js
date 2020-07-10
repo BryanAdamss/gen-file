@@ -10,9 +10,14 @@ const DEFAULT_CONFIG = {
   template: '.gen-file-template',
 }
 
+const getPkgName = (name) => name.slice(name.lastIndexOf('/') + 1)
+
 const getConfig = (name) => {
   const { config = {} } = cosmiconfigSync(name).search() || {}
   return Object.assign({}, DEFAULT_CONFIG, config)
 }
 
-module.exports = getConfig
+module.exports = {
+  getConfig,
+  getPkgName,
+}

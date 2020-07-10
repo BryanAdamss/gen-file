@@ -11,11 +11,11 @@ const Inquirer = require('inquirer')
 const name = require('./name')
 const render = require('./render')
 const changeCase = require('./case')
-const getConfig = require('./config')
+const { getConfig, getPkgName } = require('./config')
 const { info, warn, errorMsg } = require('./message')
 const { createDefaultFile, createFile } = require('./create')
 
-let config = getConfig(name)
+let config = getConfig(getPkgName(name))
 
 let relativePathObj
 Inquirer.prompt([
