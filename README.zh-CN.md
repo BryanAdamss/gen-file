@@ -1,10 +1,10 @@
 # gen-file
 
-> read ejs template then create a file
+> 读取 ejs 模板并生成文件
 
 [English](https://github.com/BryanAdamss/gen-file/blob/master/README.md) | [中文](https://github.com/BryanAdamss/gen-file/blob/master/README.zh-CN.md)
 
-## Install
+## 安装
 
 ```sh
 npm install @bryanadamss/gen-file
@@ -14,35 +14,36 @@ or
 yarn add @bryanadamss/gen-file
 ```
 
-## Config
+## 配置
 
-- [cosmiconfig](https://www.npmjs.com/package/cosmiconfig) style config
-  - so you can put a `gen-file.config.js` in the project root to modify default config just like below
+- [cosmiconfig](https://www.npmjs.com/package/cosmiconfig)配置风格
+  - 所以你可以在项目根目录下创建一个`gen-file.config.js`修改默认配置，就像下面这样
 
 ```js
 // gen-file.config.js
 module.exports = {
-  case: 'snakeCase', // default to 'paramCase'(kebab-case)
-  output: 'src/views', // default to '.'，its process.cwd()
-  template: '.gen-file-vue-template', // default to '.gen-file-template',relative to process.cwd()
+  case: 'snakeCase', // 默认 'paramCase'(kebab-case)
+  output: 'src/views', // 默认 '.'，就是 process.cwd()
+  template: '.gen-file-vue-template', // 默认 '.gen-file-template',地址相对于 process.cwd()
 }
 ```
 
 - `case`
-  - generated file name case
-  - support `camelCase, capitalCase,constantCase,dotCase,headerCase,noCase,paramCase,pascalCase,pathCase,sentenceCase,snakeCase`;
-  - You can visit [https://www.npmjs.com/package/change-case](https://www.npmjs.com/package/change-case) for a detail
+  - 生成文件文件名的大小写格式
+  - 底层使用[https://www.npmjs.com/package/change-case](https://www.npmjs.com/package/change-case)
+  - 支持`camelCase, capitalCase,constantCase,dotCase,headerCase,noCase,paramCase,pascalCase,pathCase,sentenceCase,snakeCase`;
 - `output`
-  - output directory
-  - relative to `process.cwd()`
+  - 文件的生成目录地址
+  - 相对于`process.cwd()`
 - `template`
-  - `ejs` template file name
+  - `ejs`模板的文件名
 
-## Ejs template vars
+## Ejs 模板变量
 
-- you can get all merged config variable and an additional variable `fileName`
+- 可以使用所有合并后的配置文件变量和一个额外的`fileName`变量
+- 你可以在自定义的配置文件上挂在额外变量，然后在`esj模板`中渲染他们
 
-## Examples
+## 例子
 
 ```js
 // gen-file.config.js
@@ -151,7 +152,7 @@ export default {
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+如果你觉得这个插件对你有帮助，请给一个小星星 ⭐️(star)
 
 ## 📝 License
 
