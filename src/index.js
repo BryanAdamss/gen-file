@@ -46,7 +46,7 @@ Inquirer.prompt([
     try {
       template = fs.readFileSync(config.template, 'utf-8')
     } catch (error) {
-      warn('template不存在')
+      warn(`${config.template}不存在`)
     }
 
     // 创建目录
@@ -69,8 +69,7 @@ Inquirer.prompt([
         info(`文件创建成功，${absPath}`)
       }
     } else {
-      warn('模板不存在，将创建默认文件')
-
+      warn('创建默认文件')
       // 模板不存在，创建默认文件
       createDefaultFile(relativePath)
       info(`文件创建成功，${absPath}`)
