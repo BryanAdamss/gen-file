@@ -2,29 +2,29 @@
 
 > read ejs template then generate a file
 
-[English](https://github.com/BryanAdamss/gen-file/blob/master/README.md) | [中文](https://github.com/BryanAdamss/gen-file/blob/master/README.zh-CN.md)
+[English](https://github.com/BryanAdamss/generate-file/blob/master/README.md) | [中文](https://github.com/BryanAdamss/generate-file/blob/master/README.zh-CN.md)
 
 ## Install
 
 ```sh
-npm install @bryanadamss/gen-file
+npm install @bryanadamss/generate-file
 
 or
 
-yarn add @bryanadamss/gen-file
+yarn add @bryanadamss/generate-file
 ```
 
 ## Config
 
 - [cosmiconfig](https://www.npmjs.com/package/cosmiconfig) style config
-  - so you can put a `gen-file.config.js` in the project root to modify default config just like below
+  - so you can put a `generate-file.config.js` in the project root to modify default config just like below
 
 ```js
-// gen-file.config.js
+// generate-file.config.js
 module.exports = {
   case: 'snakeCase', // default to 'paramCase'(kebab-case)
   output: 'src/views', // default to '.'，its process.cwd()
-  template: '.gen-file-vue-template', // default to '.gen-file-template',relative to process.cwd()
+  template: '.generate-file-vue-template', // default to '.generate-file-template',relative to process.cwd()
 }
 ```
 
@@ -45,14 +45,14 @@ module.exports = {
 ## Examples
 
 ```js
-// gen-file.config.js
+// generate-file.config.js
 module.exports = {
   case: 'pascalCase',
   output: 'src/views',
-  template: '.gen-file-vue-template',
+  template: '.generate-file-vue-template',
 }
 
-// .gen-file-vue-template
+// .generate-file-vue-template
 <template>
   <div class="c-<%=fileName%>"></div>
 </template>
@@ -87,14 +87,14 @@ export default {
 
 // npm script
 "scripts":{
-  "new:comp":"node ./node_modules/@bryanadamss/gen-file/src/index"
+  "new:comp":"node node_modules/@bryanadamss/generate-file"
 }
 
 // run script
 npm run new:comp
 
 // stdin
-test-gen-file.vue
+test-generate-file.vue
 
 
 // ------------------------------------

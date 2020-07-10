@@ -1,30 +1,30 @@
-# gen-file
+# generate-file
 
 > 读取 ejs 模板并生成文件
 
-[English](https://github.com/BryanAdamss/gen-file/blob/master/README.md) | [中文](https://github.com/BryanAdamss/gen-file/blob/master/README.zh-CN.md)
+[English](https://github.com/BryanAdamss/generate-file/blob/master/README.md) | [中文](https://github.com/BryanAdamss/generate-file/blob/master/README.zh-CN.md)
 
 ## 安装
 
 ```sh
-npm install @bryanadamss/gen-file
+npm install @bryanadamss/generate-file
 
 or
 
-yarn add @bryanadamss/gen-file
+yarn add @bryanadamss/generate-file
 ```
 
 ## 配置
 
 - [cosmiconfig](https://www.npmjs.com/package/cosmiconfig)配置风格
-  - 所以你可以在项目根目录下创建一个`gen-file.config.js`修改默认配置，就像下面这样
+  - 所以你可以在项目根目录下创建一个`generate-file.config.js`修改默认配置，就像下面这样
 
 ```js
-// gen-file.config.js
+// generate-file.config.js
 module.exports = {
   case: 'snakeCase', // 默认 'paramCase'(kebab-case)
   output: 'src/views', // 默认 '.'，就是 process.cwd()
-  template: '.gen-file-vue-template', // 默认 '.gen-file-template',地址相对于 process.cwd()
+  template: '.generate-file-vue-template', // 默认 '.generate-file-template',地址相对于 process.cwd()
 }
 ```
 
@@ -46,14 +46,14 @@ module.exports = {
 ## 例子
 
 ```js
-// gen-file.config.js
+// generate-file.config.js
 module.exports = {
   case: 'pascalCase',
   output: 'src/views',
-  template: '.gen-file-vue-template',
+  template: '.generate-file-vue-template',
 }
 
-// .gen-file-vue-template
+// .generate-file-vue-template
 <template>
   <div class="c-<%=fileName%>"></div>
 </template>
@@ -88,14 +88,14 @@ export default {
 
 // npm script
 "scripts":{
-  "new:comp":"node ./node_modules/@bryanadamss/gen-file/src/index"
+  "new:comp":"node node_modules/@bryanadamss/generate-file"
 }
 
 // run script
 npm run new:comp
 
 // stdin
-test-gen-file.vue
+test-generate-file.vue
 
 
 // ------------------------------------
