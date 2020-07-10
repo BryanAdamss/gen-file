@@ -1,6 +1,6 @@
 /**
  * @author GuangHui
- * @description gen file
+ * @description index
  */
 
 const fs = require('fs')
