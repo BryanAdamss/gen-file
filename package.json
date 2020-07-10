@@ -1,6 +1,6 @@
 {
   "name": "@bryanadamss/gen-file",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "read ejs template then create a file",
   "main": "src/index.js",
   "scripts": {
