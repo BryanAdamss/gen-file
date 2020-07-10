@@ -1,4 +1,4 @@
-# gen-file
+# generate-file
 
 > read ejs template then generate a file
 
